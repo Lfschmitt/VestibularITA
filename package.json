@@ -8,6 +8,14 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lfschmitt/VestibularITA.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lfschmitt/VestibularITA/issues"
+  },
+  "homepage": "https://github.com/Lfschmitt/VestibularITA#readme",
   "devDependencies": {
     "vite": "^8.0.8"
   }
