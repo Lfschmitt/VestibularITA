@@ -27,7 +27,7 @@ describe('edicoes', () => {
   describe('fase 1', () => {
     it('todas as edições possuem prova e gabarito da 1ª fase', () => {
       for (const edicao of edicoes) {
-        expect(edicao.fase1.prova).toBe(`/acervoProvas/${edicao.ano}/1fase/prova1.pdf`)
+        expect(edicao.fase1.prova).toBe(`/acervoProvas/${edicao.ano}/1fase/prova.pdf`)
         expect(edicao.fase1.gabarito).toBe(`/acervoProvas/${edicao.ano}/1fase/gabarito.pdf`)
       }
     })
