@@ -1,0 +1,195 @@
+/* ============================================
+   VESTIBULAR ITA — provas.css
+   ============================================ */
+
+/* ---------- LINK ATIVO NA NAVBAR ---------- */
+.nav-ativo {
+  color: var(--cor-acento) !important;
+  font-weight: 500;
+}
+
+/* ---------- HERO DA PÁGINA ---------- */
+.pagina-hero {
+  padding: 5rem 2rem 3.5rem;
+  max-width: var(--max-largura);
+  margin: 0 auto;
+}
+
+.pagina-hero__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0.75rem 0 1rem;
+}
+
+.pagina-hero__sub {
+  color: var(--cor-texto-suave);
+  max-width: 560px;
+  font-size: 1.05rem;
+}
+
+/* ---------- ACERVO ---------- */
+.acervo {
+  padding: 3rem 2rem 5rem;
+}
+
+.acervo__inner {
+  max-width: var(--max-largura);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Título do ano */
+.acervo__ano-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--cor-texto-suave);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.acervo__ano-titulo::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--cor-borda);
+}
+
+/* Grid de cards */
+.acervo__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* ---------- CARD DE PROVA ---------- */
+.prova-card {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: border-color var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+}
+
+.prova-card:hover {
+  border-color: var(--cor-primaria);
+  transform: translateY(-3px);
+  box-shadow: var(--sombra);
+}
+
+.prova-card__icone {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.prova-card__info {
+  flex: 1;
+}
+
+.prova-card__tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: rgba(29, 110, 237, 0.15);
+  color: var(--cor-primaria);
+  border-radius: 99px;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.prova-card__tag--2fase {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--cor-acento);
+}
+
+.prova-card__info h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.prova-card__info p {
+  color: var(--cor-texto-suave);
+  font-size: 0.8rem;
+}
+
+.prova-card__acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+/* Botão pequeno */
+.btn--sm {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+}
+
+/* ---------- SUBTÍTULO DE FASE ---------- */
+.fase-subtitulo {
+  font-family: var(--fonte-titulo);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--cor-primaria);
+  margin: 2rem 0 0.75rem;
+  padding-left: 0.1rem;
+}
+
+.fase-subtitulo--2fase {
+  color: var(--cor-acento);
+}
+
+.fase-subtitulo.oculto { display: none; }
+
+/* Card único da 1ª fase ocupa largura total */
+.prova-card--unica {
+  grid-column: 1 / -1;
+  max-width: 520px;
+}
+
+/* ---------- ESTADO VAZIO ---------- */
+.acervo__vazio {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--cor-texto-suave);
+  font-size: 1.05rem;
+  border: 1px dashed var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+/* ---------- OCULTAR CARD ---------- */
+.prova-card.oculto,
+.acervo__ano-bloco.oculto {
+  display: none;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 600px) {
+  .prova-card {
+    flex-wrap: wrap;
+  }
+
+  .prova-card__acoes {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .filtros__inner {
+    gap: 0.75rem;
+  }
+
+  .filtros__grupo select {
+    min-width: 110px;
+  }
+}
