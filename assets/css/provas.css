@@ -29,167 +29,178 @@
 
 /* ---------- ACERVO ---------- */
 .acervo {
-  padding: 3rem 2rem 5rem;
+  padding: 1rem 2rem 5rem;
 }
 
 .acervo__inner {
   max-width: var(--max-largura);
   margin: 0 auto;
+}
+
+/* ---------- LISTA DE ANOS ---------- */
+.acervo-lista {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 0.5rem;
 }
 
-/* Título do ano */
-.acervo__ano-titulo {
-  font-family: var(--fonte-titulo);
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: var(--cor-texto-suave);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.acervo__ano-titulo::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--cor-borda);
-}
-
-/* Grid de cards */
-.acervo__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-/* ---------- CARD DE PROVA ---------- */
-.prova-card {
-  background: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
+/* ---------- ITEM DO ACORDEÃO ---------- */
+.acervo-item {
   border-radius: var(--raio);
-  padding: 1.25rem 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  transition: border-color var(--transicao);
+}
+
+.acervo-item--aberto {
+  border-color: var(--cor-primaria);
+}
+
+/* Cabeçalho (botão do ano) */
+.acervo-item__header {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  transition: border-color var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: var(--cor-superficie);
+  border: none;
+  cursor: pointer;
+  color: var(--cor-texto);
+  transition: background var(--transicao);
 }
 
-.prova-card:hover {
-  border-color: var(--cor-primaria);
-  transform: translateY(-3px);
-  box-shadow: var(--sombra);
+.acervo-item__header:hover {
+  background: #161f30;
 }
 
-.prova-card__icone {
-  font-size: 1.75rem;
+.acervo-item--aberto .acervo-item__header {
+  background: rgba(29, 110, 237, 0.1);
+}
+
+.acervo-item__ano {
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--cor-texto);
+}
+
+/* Seta giratória */
+.acervo-item__seta {
+  width: 18px;
+  height: 18px;
+  border-right: 2px solid var(--cor-texto-suave);
+  border-bottom: 2px solid var(--cor-texto-suave);
+  transform: rotate(45deg);
+  transition: transform var(--transicao), border-color var(--transicao);
+  margin-right: 0.25rem;
   flex-shrink: 0;
 }
 
-.prova-card__info {
-  flex: 1;
+.acervo-item--aberto .acervo-item__seta {
+  transform: rotate(-135deg);
+  border-color: var(--cor-primaria);
 }
 
-.prova-card__tag {
-  display: inline-block;
-  font-size: 0.7rem;
+/* ---------- PAINEL EXPANDIDO ---------- */
+.acervo-item__painel[hidden] {
+  display: none;
+}
+
+.acervo-item__painel {
+  display: flex;
+  align-items: center;
+  background: #0d1525;
+  padding: 1rem 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Divisor vertical entre 1ª e 2ª fase */
+.acervo-item__divisor {
+  width: 1px;
+  align-self: stretch;
+  background: var(--cor-borda);
+  flex-shrink: 0;
+}
+
+/* Grupo de fase (1ª ou 2ª) */
+.acervo-item__grupo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.25rem 1rem;
+}
+
+.acervo-item__grupo:first-child {
+  padding-left: 0;
+}
+
+/* Label da fase */
+.acervo-item__fase-label {
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  background: rgba(29, 110, 237, 0.15);
   color: var(--cor-primaria);
-  border-radius: 99px;
-  padding: 0.2rem 0.6rem;
-  margin-bottom: 0.35rem;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
-.prova-card__tag--2fase {
+.acervo-item__fase-label--2fase {
+  color: var(--cor-acento);
+}
+
+/* Container dos links */
+.acervo-item__links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Link individual de prova/matéria */
+.acervo-link {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cor-texto-suave);
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-superficie);
+  transition: color var(--transicao), border-color var(--transicao), background var(--transicao);
+  white-space: nowrap;
+}
+
+.acervo-link:hover {
+  color: #fff;
+  border-color: var(--cor-primaria);
+  background: rgba(29, 110, 237, 0.15);
+}
+
+.acervo-link--2fase:hover {
+  border-color: var(--cor-acento);
   background: rgba(56, 189, 248, 0.12);
   color: var(--cor-acento);
 }
 
-.prova-card__info h3 {
-  font-family: var(--fonte-titulo);
-  font-size: 1rem;
-  margin-bottom: 0.15rem;
-}
-
-.prova-card__info p {
-  color: var(--cor-texto-suave);
-  font-size: 0.8rem;
-}
-
-.prova-card__acoes {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  flex-shrink: 0;
-}
-
-/* Botão pequeno */
-.btn--sm {
-  padding: 0.4rem 0.85rem;
-  font-size: 0.8rem;
-}
-
-/* ---------- SUBTÍTULO DE FASE ---------- */
-.fase-subtitulo {
-  font-family: var(--fonte-titulo);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--cor-primaria);
-  margin: 2rem 0 0.75rem;
-  padding-left: 0.1rem;
-}
-
-.fase-subtitulo--2fase {
-  color: var(--cor-acento);
-}
-
-.fase-subtitulo.oculto { display: none; }
-
-/* Card único da 1ª fase ocupa largura total */
-.prova-card--unica {
-  grid-column: 1 / -1;
-  max-width: 520px;
-}
-
-/* ---------- ESTADO VAZIO ---------- */
-.acervo__vazio {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--cor-texto-suave);
-  font-size: 1.05rem;
-  border: 1px dashed var(--cor-borda);
-  border-radius: var(--raio);
-}
-
-/* ---------- OCULTAR CARD ---------- */
-.prova-card.oculto,
-.acervo__ano-bloco.oculto {
-  display: none;
-}
-
 /* ---------- RESPONSIVIDADE ---------- */
-@media (max-width: 600px) {
-  .prova-card {
-    flex-wrap: wrap;
-  }
-
-  .prova-card__acoes {
-    flex-direction: row;
-    width: 100%;
-  }
-
-  .filtros__inner {
+@media (max-width: 768px) {
+  .acervo-item__painel {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.75rem;
   }
 
-  .filtros__grupo select {
-    min-width: 110px;
+  .acervo-item__divisor {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .acervo-item__grupo {
+    padding: 0;
   }
 }

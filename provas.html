@@ -47,154 +47,518 @@
   <main class="acervo">
     <div class="acervo__inner">
 
-      <!-- 2026 -->
-      <div class="acervo__ano-bloco" data-ano="2026">
-        <h2 class="acervo__ano-titulo"><span>2026</span></h2>
+      <div class="acervo-lista">
 
-        <!-- 1ª Fase -->
-        <h3 class="fase-subtitulo" data-fase="1fase">1ª Fase</h3>
-        <div class="acervo__grid" data-fase="1fase">
-          <div class="prova-card prova-card--unica" data-fase="1fase">
-            <div class="prova-card__icone">📄</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag">1ª Fase</span>
-              <h3>Prova Completa</h3>
-              <p>Matemática · Física · Química · Português · Inglês</p>
+        <!-- Anos 2026–2019: 2ª Fase com 4 matérias -->
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2026</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2026/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2026/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
             </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2026/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2026/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2026/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2026/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 2ª Fase -->
-        <h3 class="fase-subtitulo fase-subtitulo--2fase" data-fase="2fase">2ª Fase</h3>
-        <div class="acervo__grid" data-fase="2fase">
-          <div class="prova-card" data-fase="2fase" data-materia="matematica">
-            <div class="prova-card__icone">📝</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag prova-card__tag--2fase">2ª Fase</span>
-              <h3>Matemática</h3>
-              <p>Discursiva</p>
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2025</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2025/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2025/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
             </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
-            </div>
-          </div>
-          <div class="prova-card" data-fase="2fase" data-materia="fisica">
-            <div class="prova-card__icone">📝</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag prova-card__tag--2fase">2ª Fase</span>
-              <h3>Física</h3>
-              <p>Discursiva</p>
-            </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
-            </div>
-          </div>
-          <div class="prova-card" data-fase="2fase" data-materia="quimica">
-            <div class="prova-card__icone">📝</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag prova-card__tag--2fase">2ª Fase</span>
-              <h3>Química</h3>
-              <p>Discursiva</p>
-            </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
-            </div>
-          </div>
-          <div class="prova-card" data-fase="2fase" data-materia="portugues">
-            <div class="prova-card__icone">📝</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag prova-card__tag--2fase">2ª Fase</span>
-              <h3>Português</h3>
-              <p>Discursiva</p>
-            </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2025/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2025/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2025/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2025/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2024</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2024/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2024/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2024/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2024/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2024/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2024/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2023</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2023/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2023/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2023/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2023/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2023/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2023/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2022</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2022/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2022/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2022/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2022/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2022/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2022/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2021</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2021/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2021/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2021/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2021/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2021/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2021/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2020</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2020/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2020/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2020/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2020/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2020/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2020/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2019</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2019/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2019/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2019/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2019/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2019/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2019/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anos 2018–2008: 2ª Fase com 5 matérias (+ Inglês) -->
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2018</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2018/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2018/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2018/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2018/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2018/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2018/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2018/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2017</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2017/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2017/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2017/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2017/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2017/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2017/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2017/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2016</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2016/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2016/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2016/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2016/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2016/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2016/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2016/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2015</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2015/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2015/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2015/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2015/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2015/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2015/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2015/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2014</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2014/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2014/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2014/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2014/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2014/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2014/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2014/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2013</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2013/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2013/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2013/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2013/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2013/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2013/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2013/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2012</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2012/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2012/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2012/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2012/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2012/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2012/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2012/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2011</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2011/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2011/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2011/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2011/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2011/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2011/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2011/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2010</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2010/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2010/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2010/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2010/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2010/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2010/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2010/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2009</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2009/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2009/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2009/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2009/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2009/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2009/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2009/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acervo-item">
+          <button class="acervo-item__header" aria-expanded="false">
+            <span class="acervo-item__ano">2008</span>
+            <span class="acervo-item__seta" aria-hidden="true"></span>
+          </button>
+          <div class="acervo-item__painel" hidden>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label">Primeira Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2008/1fase/prova.pdf" class="acervo-link" target="_blank">Prova</a>
+                <a href="assets/acervoProvas/2008/1fase/gabarito.pdf" class="acervo-link" target="_blank">Gabarito</a>
+              </div>
+            </div>
+            <div class="acervo-item__divisor"></div>
+            <div class="acervo-item__grupo">
+              <span class="acervo-item__fase-label acervo-item__fase-label--2fase">Segunda Fase</span>
+              <div class="acervo-item__links">
+                <a href="assets/acervoProvas/2008/2fase/matematica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Matemática</a>
+                <a href="assets/acervoProvas/2008/2fase/quimica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Química</a>
+                <a href="assets/acervoProvas/2008/2fase/fisica.pdf" class="acervo-link acervo-link--2fase" target="_blank">Física</a>
+                <a href="assets/acervoProvas/2008/2fase/portugues.pdf" class="acervo-link acervo-link--2fase" target="_blank">Português</a>
+                <a href="assets/acervoProvas/2008/2fase/ingles.pdf" class="acervo-link acervo-link--2fase" target="_blank">Inglês</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <!-- 2025 -->
-      <div class="acervo__ano-bloco" data-ano="2025">
-        <h2 class="acervo__ano-titulo"><span>2025</span></h2>
-
-        <h3 class="fase-subtitulo" data-fase="1fase">1ª Fase</h3>
-        <div class="acervo__grid" data-fase="1fase">
-          <div class="prova-card prova-card--unica" data-fase="1fase">
-            <div class="prova-card__icone">📄</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag">1ª Fase</span>
-              <h3>Prova Completa</h3>
-              <p>Matemática · Física · Química · Português · Inglês</p>
-            </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="fase-subtitulo fase-subtitulo--2fase" data-fase="2fase">2ª Fase</h3>
-        <div class="acervo__grid" data-fase="2fase">
-          <div class="prova-card" data-fase="2fase" data-materia="matematica">
-            <div class="prova-card__icone">📝</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag prova-card__tag--2fase">2ª Fase</span>
-              <h3>Matemática</h3>
-              <p>Discursiva</p>
-            </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
-            </div>
-          </div>
-          <div class="prova-card" data-fase="2fase" data-materia="fisica">
-            <div class="prova-card__icone">📝</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag prova-card__tag--2fase">2ª Fase</span>
-              <h3>Física</h3>
-              <p>Discursiva</p>
-            </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
-            </div>
-          </div>
-          <div class="prova-card" data-fase="2fase" data-materia="quimica">
-            <div class="prova-card__icone">📝</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag prova-card__tag--2fase">2ª Fase</span>
-              <h3>Química</h3>
-              <p>Discursiva</p>
-            </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
-            </div>
-          </div>
-          <div class="prova-card" data-fase="2fase" data-materia="portugues">
-            <div class="prova-card__icone">📝</div>
-            <div class="prova-card__info">
-              <span class="prova-card__tag prova-card__tag--2fase">2ª Fase</span>
-              <h3>Português</h3>
-              <p>Discursiva</p>
-            </div>
-            <div class="prova-card__acoes">
-              <a href="#" class="btn btn--primario btn--sm">Prova</a>
-              <a href="#" class="btn btn--secundario btn--sm">Gabarito</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </main>
 
@@ -215,6 +579,26 @@
     </div>
   </footer>
 
-  <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.querySelectorAll('.acervo-item__header').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const painel = btn.nextElementSibling;
+        const aberto = btn.getAttribute('aria-expanded') === 'true';
+
+        document.querySelectorAll('.acervo-item__header').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.hidden = true;
+          b.closest('.acervo-item').classList.remove('acervo-item--aberto');
+        });
+
+        if (!aberto) {
+          btn.setAttribute('aria-expanded', 'true');
+          painel.hidden = false;
+          btn.closest('.acervo-item').classList.add('acervo-item--aberto');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
