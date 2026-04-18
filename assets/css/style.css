@@ -95,30 +95,21 @@ a { text-decoration: none; color: inherit; }
   border-bottom: 1px solid var(--cor-borda);
 }
 
-.navbar__logo {
+.navbar__logo a {
   display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
+  align-items: center;
 }
 
-.navbar__logo-sigla {
-  font-family: var(--fonte-titulo);
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--cor-acento);
-  letter-spacing: 2px;
-}
-
-.navbar__logo-texto {
-  font-size: 0.85rem;
-  color: var(--cor-texto-suave);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.navbar__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .navbar__links {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.75rem;
 }
 
 .navbar__links a {
@@ -129,19 +120,68 @@ a { text-decoration: none; color: inherit; }
 
 .navbar__links a:hover { color: var(--cor-texto); }
 
-.navbar__cta {
-  padding: 0.5rem 1.2rem;
-  background: var(--cor-primaria);
-  color: #fff;
+/* ---------- DROPDOWN RESULTADOS ---------- */
+.navbar__dropdown {
+  position: relative;
+}
+
+.navbar__dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
   border: none;
-  border-radius: var(--raio);
+  color: var(--cor-texto-suave);
   font-family: var(--fonte-corpo);
   font-size: 0.9rem;
   cursor: pointer;
-  transition: background var(--transicao);
+  padding: 0;
+  transition: color var(--transicao);
 }
 
-.navbar__cta:hover { background: #1558c7; }
+.navbar__dropdown-btn:hover { color: var(--cor-texto); }
+
+.navbar__dropdown-seta {
+  font-size: 0.75rem;
+  transition: transform var(--transicao);
+}
+
+.navbar__dropdown:hover .navbar__dropdown-seta {
+  transform: rotate(180deg);
+}
+
+.navbar__dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.5rem 0;
+  min-width: 220px;
+  box-shadow: var(--sombra);
+  z-index: 200;
+}
+
+.navbar__dropdown:hover .navbar__dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__dropdown-menu a {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+  white-space: nowrap;
+  transition: background var(--transicao), color var(--transicao);
+}
+
+.navbar__dropdown-menu a:hover {
+  background: rgba(29, 110, 237, 0.1);
+  color: var(--cor-texto);
+}
 
 .navbar__menu-toggle {
   display: none;
@@ -153,6 +193,27 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ---------- 5. HERO ---------- */
+.hero-wrapper {
+  position: relative;
+  background-image: url('../img/Background_Sobre.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 15, 30, 0.82);
+  pointer-events: none;
+}
+
+.hero-wrapper > .hero {
+  position: relative;
+  z-index: 1;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -160,7 +221,7 @@ a { text-decoration: none; color: inherit; }
   gap: 3rem;
   max-width: var(--max-largura);
   margin: 0 auto;
-  padding: 6rem 2rem 5rem;
+  padding: 2rem 2rem 5rem;
 }
 
 .hero__tag {
@@ -178,8 +239,8 @@ a { text-decoration: none; color: inherit; }
 
 .hero__titulo {
   font-family: var(--fonte-titulo);
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-  line-height: 1.15;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  line-height: 1.0;
   margin-bottom: 1.25rem;
 }
 
@@ -189,24 +250,82 @@ a { text-decoration: none; color: inherit; }
 
 .hero__subtitulo {
   color: var(--cor-texto-suave);
-  font-size: 1.05rem;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
   max-width: 480px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Lista de especializações */
+.hero__lista {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
 }
 
 .hero__acoes {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  border-radius: var(--raio);
+  padding: 1.5rem 0rem;
 }
 
-.hero__placeholder-img {
+/* Vídeo institucional */
+.hero__video-wrapper {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   border-radius: var(--raio);
-  background: linear-gradient(135deg, var(--cor-superficie), var(--cor-borda));
+  overflow: hidden;
+  border: 2px solid var(--cor-borda);
+  background: var(--cor-superficie);
+  margin-bottom: 1.5rem;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Campus do ITA */
+.hero__campus {
+  background: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
-  /* Substituir por <img> futuramente */
+  border-radius: var(--raio);
+  padding: 1.25rem 1.5rem;
+}
+
+.hero__campus-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--cor-texto);
+}
+
+.hero__campus-lista {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.hero__campus-desc {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+  text-align: justify;
 }
 
 /* ---------- 6. DATAS ---------- */

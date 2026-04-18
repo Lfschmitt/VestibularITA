@@ -18,73 +18,82 @@
   <!-- ========== NAVBAR ========== -->
   <header class="navbar">
     <div class="navbar__logo">
-      <span class="navbar__logo-sigla">ITA</span>
-      <span class="navbar__logo-texto">Vestibular</span>
+      <a href="index.html">
+        <img src="assets/img/ITA_logo.png" alt="ITA Vestibular" class="navbar__logo-img" />
+      </a>
     </div>
     <nav class="navbar__links">
-      <a href="#sobre">Sobre</a>
-      <a href="#inscricoes">Inscrições</a>
-      <a href="#provas">Provas</a>
-      <a href="#resultados">Resultados</a>
-      <a href="#faq">FAQ</a>
+      <a href="#sobre">Sobre o ITA</a>
+      <a href="#processo">Processo Seletivo 2027</a>
+      <div class="navbar__dropdown">
+        <button class="navbar__dropdown-btn">Resultados <span class="navbar__dropdown-seta">▾</span></button>
+        <div class="navbar__dropdown-menu">
+          <a href="#resultados">Processo Seletivo 2027</a>
+          <a href="#estatisticas">Estatísticas Anteriores</a>
+        </div>
+      </div>
+      <a href="provas.html">Provas</a>
+      <a href="#documentos">Documentos</a>
+      <a href="#contato">Contato</a>
     </nav>
-    <button class="navbar__cta">Inscreva-se</button>
     <button class="navbar__menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
   </header>
 
-  <!-- ========== HERO ========== -->
+  <!-- ========== SOBRE O ITA ========== -->
+  <section class="hero-wrapper" id="sobre">
   <section class="hero">
     <div class="hero__content">
-      <p class="hero__tag">Edição 2025</p>
+      <p class="hero__tag">Edição de 2027</p>
       <h1 class="hero__titulo">
         O caminho para<br />
         <span class="hero__destaque">voar mais alto</span><br />
         começa aqui.
       </h1>
       <p class="hero__subtitulo">
-        O vestibular do ITA é uma das seleções mais exigentes do Brasil.
-        Encontre aqui tudo que você precisa para se preparar.
+        O Instituto Tecnológico de Aeronáutica oferece cursos de graduação
+        com duração de 5 anos. Os dois primeiros anos formam o "Curso
+        Fundamental", com base sólida em física e matemática. A partir do
+        terceiro ano, o aluno segue para a especialização escolhida:
       </p>
-      <div class="hero__acoes">
-        <a href="#inscricoes" class="btn btn--primario">Ver inscrições</a>
-        <a href="#provas" class="btn btn--secundario">Provas anteriores</a>
-      </div>
+      <ul class="hero__lista">
+        <li>Engenharia Aeronáutica</li>
+        <li>Engenharia Eletrônica</li>
+        <li>Engenharia Mecânica-Aeronáutica</li>
+        <li>Engenharia Civil-Aeronáutica</li>
+        <li>Engenharia de Computação</li>
+        <li>Engenharia Aeroespacial</li>
+        <li>Engenharia de Sistemas</li>
+        <li>Engenharia de Energias</li>
+      </ul>
     </div>
     <div class="hero__visual">
-      <!-- Placeholder para imagem/ilustração futura -->
-      <div class="hero__placeholder-img"></div>
-    </div>
-  </section>
-
-  <!-- ========== DATAS IMPORTANTES ========== -->
-  <section class="datas" id="sobre">
-    <h2 class="secao__titulo">Datas Importantes</h2>
-    <div class="datas__grid">
-      <div class="datas__card">
-        <span class="datas__icone">📋</span>
-        <h3>Inscrições</h3>
-        <p>01 ago – 30 set 2025</p>
+      <div class="hero__video-wrapper">
+        <iframe
+          class="hero__video"
+          src="https://www.youtube.com/embed/4taGOvPA-74"
+          title="Vídeo Institucional ITA"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
-      <div class="datas__card">
-        <span class="datas__icone">✏️</span>
-        <h3>1ª Fase</h3>
-        <p>15 nov 2025</p>
+      <div class="hero__campus">
+        <h3 class="hero__campus-titulo">Campus do ITA</h3>
+        <ul class="hero__campus-lista">
+          <li>Campus São José dos Campos (SP)</li>
+          <li>Campus Fortaleza (CE)</li>
+        </ul>
       </div>
-      <div class="datas__card">
-        <span class="datas__icone">📐</span>
-        <h3>2ª Fase</h3>
-        <p>08–12 jan 2026</p>
-      </div>
-      <div class="datas__card">
-        <span class="datas__icone">🏆</span>
-        <h3>Resultado Final</h3>
-        <p>28 jan 2026</p>
+      <div class="hero__acoes">
+        <a href="#processo" class="btn btn--primario">Ver inscrições</a>
+        <a href="provas.html" class="btn btn--secundario">Provas anteriores</a>
       </div>
     </div>
   </section>
+  </section><!-- fim hero-wrapper -->
 
-  <!-- ========== INSCRIÇÕES ========== -->
-  <section class="inscricoes" id="inscricoes">
+  <!-- ========== PROCESSO SELETIVO ========== -->
+  <section class="inscricoes" id="processo">
     <div class="inscricoes__texto">
       <h2 class="secao__titulo">Inscrições</h2>
       <p>As inscrições são realizadas exclusivamente online. Candidatos devem estar cursando ou ter concluído o Ensino Médio.</p>
