@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(echo \"EXIT:$?\")",
-      "Bash(git ls-tree *)"
+      "Bash(git ls-tree *)",
+      "Bash(grep -E \"\\\\.\\(jpg|png|svg|gif\\)$\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
     ]
   }
 }
