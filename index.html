@@ -1,175 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vestibular ITA — Instituto Tecnológico de Aeronáutica" />
-  <title>Vestibular ITA</title>
-
-  <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
-
-  <!-- ========== NAVBAR ========== -->
-  <header class="navbar">
-    <div class="navbar__logo">
-      <a href="index.html">
-        <img src="assets/img/ITA_logo.png" alt="ITA Vestibular" class="navbar__logo-img" />
-      </a>
-    </div>
-    <nav class="navbar__links">
-      <a href="#sobre">Sobre o ITA</a>
-      <a href="#processo">Processo Seletivo 2027</a>
-      <div class="navbar__dropdown">
-        <button class="navbar__dropdown-btn">Resultados <span class="navbar__dropdown-seta">▾</span></button>
-        <div class="navbar__dropdown-menu">
-          <a href="#resultados">Processo Seletivo 2027</a>
-          <a href="#estatisticas">Estatísticas Anteriores</a>
-        </div>
-      </div>
-      <a href="provas.html">Provas</a>
-      <a href="#documentos">Documentos</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <button class="navbar__menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
-  </header>
-
-  <!-- ========== SOBRE O ITA ========== -->
-  <section class="hero-wrapper" id="sobre">
-  <section class="hero">
-    <div class="hero__content">
-      <p class="hero__tag">Edição de 2027</p>
-      <h1 class="hero__titulo">
-        O caminho para<br />
-        <span class="hero__destaque">voar mais alto</span><br />
-        começa aqui.
-      </h1>
-      <p class="hero__subtitulo">
-        O Instituto Tecnológico de Aeronáutica oferece cursos de graduação
-        com duração de 5 anos. Os dois primeiros anos formam o "Curso
-        Fundamental", com base sólida em física e matemática. A partir do
-        terceiro ano, o aluno segue para a especialização escolhida:
-      </p>
-      <ul class="hero__lista">
-        <li>Engenharia Aeronáutica</li>
-        <li>Engenharia Eletrônica</li>
-        <li>Engenharia Mecânica-Aeronáutica</li>
-        <li>Engenharia Civil-Aeronáutica</li>
-        <li>Engenharia de Computação</li>
-        <li>Engenharia Aeroespacial</li>
-        <li>Engenharia de Sistemas</li>
-        <li>Engenharia de Energias</li>
-      </ul>
-    </div>
-    <div class="hero__visual">
-      <div class="hero__video-wrapper">
-        <iframe
-          class="hero__video"
-          src="https://www.youtube.com/embed/4taGOvPA-74"
-          title="Vídeo Institucional ITA"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div class="hero__campus">
-        <h3 class="hero__campus-titulo">Campus do ITA</h3>
-        <ul class="hero__campus-lista">
-          <li>Campus São José dos Campos (SP)</li>
-          <li>Campus Fortaleza (CE)</li>
-        </ul>
-      </div>
-      <div class="hero__acoes">
-        <a href="#processo" class="btn btn--primario">Ver inscrições</a>
-        <a href="provas.html" class="btn btn--secundario">Provas anteriores</a>
-      </div>
-    </div>
-  </section>
-  </section><!-- fim hero-wrapper -->
-
-  <!-- ========== PROCESSO SELETIVO ========== -->
-  <section class="inscricoes" id="processo">
-    <div class="inscricoes__texto">
-      <h2 class="secao__titulo">Inscrições</h2>
-      <p>As inscrições são realizadas exclusivamente online. Candidatos devem estar cursando ou ter concluído o Ensino Médio.</p>
-      <ul class="inscricoes__lista">
-        <li>✔ Taxa de inscrição: R$ 180,00</li>
-        <li>✔ Isenção para candidatos de baixa renda</li>
-        <li>✔ Necessário documentação completa</li>
-      </ul>
-      <a href="#" class="btn btn--primario">Acessar portal de inscrições</a>
-    </div>
-    <div class="inscricoes__imagem">
-      <!-- Placeholder -->
-      <div class="inscricoes__placeholder"></div>
-    </div>
-  </section>
-
-  <!-- ========== PROVAS ========== -->
-  <section class="provas" id="provas">
-    <h2 class="secao__titulo">Provas</h2>
-    <div class="provas__grid">
-      <div class="provas__card">
-        <h3>1ª Fase</h3>
-        <p>60 questões objetivas de Matemática, Física, Química, Português e Inglês.</p>
-      </div>
-      <div class="provas__card">
-        <h3>2ª Fase</h3>
-        <p>Provas discursivas de Matemática, Física, Química, Redação e Inglês ao longo de 5 dias.</p>
-      </div>
-      <div class="provas__card provas__card--destaque">
-        <h3>Gabaritos e Provas Anteriores</h3>
-        <p>Acesse provas e gabaritos de edições anteriores para se preparar melhor.</p>
-        <a href="provas.html" class="btn btn--secundario">Ver acervo</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FAQ ========== -->
-  <section class="faq" id="faq">
-    <h2 class="secao__titulo">Dúvidas Frequentes</h2>
-    <div class="faq__lista">
-      <details class="faq__item">
-        <summary>Quem pode se inscrever no vestibular do ITA?</summary>
-        <p>Qualquer candidato que esteja cursando ou tenha concluído o Ensino Médio, com no máximo 21 anos completos até 31 de dezembro do ano de realização das provas.</p>
-      </details>
-      <details class="faq__item">
-        <summary>Como funciona a isenção da taxa de inscrição?</summary>
-        <p>Candidatos inscritos no CadÚnico ou oriundos de escola pública podem solicitar isenção durante o período de inscrições, mediante documentação comprobatória.</p>
-      </details>
-      <details class="faq__item">
-        <summary>Quantas vagas são oferecidas?</summary>
-        <p>O ITA oferece aproximadamente 120 vagas anuais para o curso de Engenharia.</p>
-      </details>
-      <details class="faq__item">
-        <summary>O ITA oferece bolsas ou auxílios?</summary>
-        <p>Sim. Todos os alunos aprovados recebem bolsa integral e moradia no campus, por se tratar de uma instituição militar federal.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="footer__conteudo">
-      <div>
-        <span class="navbar__logo-sigla">ITA</span>
-        <p>Instituto Tecnológico de Aeronáutica<br />São José dos Campos — SP</p>
-      </div>
-      <nav class="footer__links">
-        <a href="#sobre">Sobre</a>
-        <a href="#inscricoes">Inscrições</a>
-        <a href="#provas">Provas</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <p class="footer__aviso">⚠️ Site não oficial — projeto educacional independente.</p>
-    </div>
-  </footer>
-
-  <script type="module" src="assets/js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vestibular ITA — Instituto Tecnológico de Aeronáutica" />
+    <title>Vestibular ITA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
