@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 export default function Home() {
   useEffect(() => {
     const elementos = document.querySelectorAll<HTMLElement>(
-      '.datas__card, .provas__card, .faq__item, .hero__content, .inscricoes__texto',
+      '.datas__card, .processo__card, .faq__item, .hero__content',
     )
 
     elementos.forEach(el => {
@@ -95,49 +95,93 @@ export default function Home() {
         </section>
       </section>
 
-      {/* PROCESSO SELETIVO */}
-      <section className="inscricoes" id="processo">
-        <div className="inscricoes__texto">
-          <h2 className="secao__titulo">Inscrições</h2>
-          <p>
-            As inscrições são realizadas exclusivamente online. Candidatos devem estar cursando ou
-            ter concluído o Ensino Médio.
-          </p>
-          <ul className="inscricoes__lista">
-            <li>✔ Taxa de inscrição: R$ 180,00</li>
-            <li>✔ Isenção para candidatos de baixa renda</li>
-            <li>✔ Necessário documentação completa</li>
-          </ul>
-          <a href="#" className="btn btn--primario">
-            Acessar portal de inscrições
-          </a>
-        </div>
-        <div className="inscricoes__imagem">
-          <div className="inscricoes__placeholder" />
-        </div>
-      </section>
+      {/* PROCESSO SELETIVO 2027 */}
+      <section className="processo" id="processo">
+        <div className="processo__container">
 
-      {/* PROVAS */}
-      <section className="provas" id="provas">
-        <h2 className="secao__titulo">Provas</h2>
-        <div className="provas__grid">
-          <div className="provas__card">
-            <h3>1ª Fase</h3>
-            <p>60 questões objetivas de Matemática, Física, Química, Português e Inglês.</p>
+          {/* Provas */}
+          <h2 className="secao__titulo processo__titulo">Provas</h2>
+          <div className="processo__provas-grid">
+            <div className="processo__card">
+              <h3>1ª Fase</h3>
+              <p>48 questões objetivas de Matemática, Física, Química e Inglês.</p>
+            </div>
+            <div className="processo__card">
+              <h3>2ª Fase</h3>
+              <p>Provas discursivas de Matemática, Química, Física e Português ao longo de 4 dias.</p>
+            </div>
+            <div className="processo__card processo__card--destaque">
+              <Link to="/provas">Provas anteriores</Link>
+            </div>
           </div>
-          <div className="provas__card">
-            <h3>2ª Fase</h3>
-            <p>
-              Provas discursivas de Matemática, Física, Química, Redação e Inglês ao longo de 5
-              dias.
-            </p>
-          </div>
-          <div className="provas__card provas__card--destaque">
-            <h3>Gabaritos e Provas Anteriores</h3>
-            <p>Acesse provas e gabaritos de edições anteriores para se preparar melhor.</p>
-            <Link to="/provas" className="btn btn--secundario">
-              Ver acervo
-            </Link>
+
+          {/* Inscrições + Quadro de Avisos */}
+          <div className="processo__bottom">
+
+            {/* Esquerda: texto de inscrições + tabela de cidades */}
+            <div className="processo__esquerda">
+              <h2 className="secao__titulo">Inscrições</h2>
+              <p>
+                As inscrições são realizadas exclusivamente online. Candidatos devem estar cursando
+                ou ter concluído o Ensino Médio.
+              </p>
+              <ul className="processo__inscricoes-lista">
+                <li>✔ Taxa de inscrição: R$ 180,00</li>
+                <li>✔ Isenção para candidatos de baixa renda</li>
+                <li>✔ Necessário documentação completa</li>
+              </ul>
+
+              {/* Tabela de cidades onde a prova é aplicada (2 colunas × 13 linhas) */}
+              <table className="processo__cidades">
+                <thead>
+                  <tr>
+                    <th colSpan={2}>Locais de Provas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Belém</td><td>Natal</td></tr>
+                  <tr><td>Belo Horizonte</td><td>Porto Alegre</td></tr>
+                  <tr><td>Brasília</td><td>Recife</td></tr>
+                  <tr><td>Campinas</td><td>Ribeirão Preto</td></tr>
+                  <tr><td>Campo Grande</td><td>Rio de Janeiro</td></tr>
+                  <tr><td>Cuiabá</td><td>São José dos Campos</td></tr>
+                  <tr><td>Curitiba</td><td>São José do Rio Preto</td></tr>
+                  <tr><td>Florianópolis</td><td>Salvador</td></tr>
+                  <tr><td>Fortaleza</td><td>São Luís</td></tr>
+                  <tr><td>Goiânia</td><td>São Paulo</td></tr>
+                  <tr><td>Juiz de Fora</td><td>Teresina</td></tr>
+                  <tr><td>Londrina</td><td>Vitória</td></tr>
+                  <tr><td>Manaus</td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Direita: Quadro de Avisos */}
+            <div className="processo__avisos">
+              <h3 className="processo__avisos-titulo">Quadro de Avisos</h3>
+              <div className="processo__avisos-links">
+                <a href="#" className="processo__aviso-link">
+                  Solicitação de Isenção de Pagamento da Taxa de Inscrição (SIPTI)
+                </a>
+                <a href="#" className="processo__aviso-link">
+                  Enviar Documentação
+                </a>
+              </div>
+              <div className="processo__avisos-datas">
+                <p className="processo__aviso-label">Período para a Solicitação:</p>
+                <ul>
+                  <li>14 abr a 10 mai 2026</li>
+                </ul>
+                <p className="processo__aviso-label">Divulgação dos Resultados:</p>
+                <ul>
+                  <li>22 mai 2025</li>
+                </ul>
+              </div>
+              <p className="processo__aviso-aguarde">
+                Aguarde a divulgação das datas para realizar a inscrição.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
