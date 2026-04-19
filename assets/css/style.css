@@ -371,51 +371,31 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.9rem;
 }
 
-/* ---------- 7. INSCRIÇÕES ---------- */
-.inscricoes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 3rem;
-  max-width: var(--max-largura);
-  margin: 0 auto;
-  padding: 5rem 2rem;
-}
-
-.inscricoes__lista {
-  list-style: none;
-  margin: 1.25rem 0 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  color: var(--cor-texto-suave);
-}
-
-.inscricoes__placeholder {
-  width: 100%;
-  aspect-ratio: 4/3;
-  border-radius: var(--raio);
-  background: linear-gradient(135deg, var(--cor-superficie), var(--cor-borda));
-  border: 1px solid var(--cor-borda);
-}
-
-/* ---------- 8. PROVAS ---------- */
-.provas {
+/* ---------- 7. PROCESSO SELETIVO ---------- */
+.processo {
   background: var(--cor-superficie);
   border-top: 1px solid var(--cor-borda);
   padding: 5rem 2rem;
-  text-align: center;
 }
 
-.provas__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+.processo__container {
   max-width: var(--max-largura);
   margin: 0 auto;
 }
 
-.provas__card {
+.processo__titulo {
+  text-align: center;
+}
+
+/* Cards de provas */
+.processo__provas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.processo__card {
   background: var(--cor-fundo);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio);
@@ -424,19 +404,155 @@ a { text-decoration: none; color: inherit; }
   transition: border-color var(--transicao);
 }
 
-.provas__card:hover { border-color: var(--cor-primaria); }
+.processo__card:hover { border-color: var(--cor-primaria); }
 
-.provas__card h3 {
+.processo__card h3 {
   font-family: var(--fonte-titulo);
   margin-bottom: 0.75rem;
   color: var(--cor-acento);
 }
 
-.provas__card p { color: var(--cor-texto-suave); margin-bottom: 1.25rem; }
+.processo__card p { color: var(--cor-texto-suave); }
 
-.provas__card--destaque {
+.processo__card--destaque {
+  background: var(--cor-primaria);
   border-color: var(--cor-primaria);
-  background: rgba(29, 110, 237, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.processo__card--destaque a {
+  font-family: var(--fonte-titulo);
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.processo__card--destaque:hover {
+  border-color: var(--cor-acento);
+  background: #1860d4;
+}
+
+/* Bloco inferior: inscrições (esq) + quadro de avisos (dir) */
+.processo__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* Esquerda — sem card, só texto + tabela */
+.processo__esquerda {
+  display: flex;
+  flex-direction: column;
+}
+
+.processo__esquerda .secao__titulo {
+  margin-bottom: 1rem;
+}
+
+.processo__esquerda > p {
+  color: var(--cor-texto-suave);
+  margin-bottom: 1rem;
+}
+
+.processo__inscricoes-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 2rem;
+}
+
+/* Tabela de cidades */
+.processo__cidades {
+  width: 100%;
+  border-collapse: collapse;
+  flex: 1;
+}
+
+.processo__cidades th {
+  background: var(--cor-fundo);
+  color: var(--cor-acento);
+  font-family: var(--fonte-titulo);
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--cor-borda);
+}
+
+.processo__cidades td {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  background: var(--cor-fundo);
+}
+
+/* Direita — Quadro de Avisos */
+.processo__avisos {
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.processo__avisos-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  color: var(--cor-texto);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--cor-borda);
+  width: 70%;
+}
+
+.processo__avisos-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.processo__aviso-link {
+  color: var(--cor-acento);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  transition: color var(--transicao);
+  line-height: 1.5;
+}
+
+.processo__aviso-link:hover { color: var(--cor-texto); }
+
+.processo__avisos-datas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.processo__aviso-label {
+  font-weight: 500;
+  color: var(--cor-texto);
+  font-size: 0.95rem;
+}
+
+.processo__avisos-datas ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+.processo__aviso-aguarde {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  font-size: 0.875rem;
+  font-style: italic;
 }
 
 /* ---------- 9. FAQ ---------- */
@@ -536,17 +652,20 @@ a { text-decoration: none; color: inherit; }
 
   .navbar__menu-toggle { display: block; }
 
-  .hero,
-  .inscricoes {
+  .hero {
     grid-template-columns: 1fr;
     padding: 3rem 1.25rem;
   }
 
-  .hero__visual,
-  .inscricoes__imagem { order: -1; }
+  .hero__visual { order: -1; }
 
-  .hero__placeholder-img,
-  .inscricoes__placeholder { aspect-ratio: 16/9; }
+  .processo__provas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .processo__bottom {
+    grid-template-columns: 1fr;
+  }
 
   .footer__conteudo { flex-direction: column; }
 }
