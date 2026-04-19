@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { edicoes, type Edicao } from '../data/provas'
@@ -62,6 +62,48 @@ function AcervoItem({ edicao, aberto, onToggle }: AcervoItemProps) {
 
 export default function Provas() {
   const [anoAberto, setAnoAberto] = useState<number | null>(null)
+
+  useEffect(() => {
+    const elementos = Array.from(
+      document.querySelectorAll<HTMLElement>('.pagina-hero__conteudo, .acervo-item'),
+    )
+
+    elementos.forEach(el => el.classList.add('animar'))
+
+    const visiveis: HTMLElement[] = []
+    const naoVisiveis: HTMLElement[] = []
+
+    elementos.forEach(el => {
+      const rect = el.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) visiveis.push(el)
+      else naoVisiveis.push(el)
+    })
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        visiveis.forEach((el, i) => {
+          el.style.transitionDelay = `${i * 0.06}s`
+          el.classList.add('animar--visivel')
+        })
+      })
+    })
+
+    const observador = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animar--visivel')
+            observador.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.12 },
+    )
+
+    naoVisiveis.forEach(el => observador.observe(el))
+
+    return () => observador.disconnect()
+  }, [])
 
   const toggle = (ano: number) => {
     setAnoAberto(prev => (prev === ano ? null : ano))

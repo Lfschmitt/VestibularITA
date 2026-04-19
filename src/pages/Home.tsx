@@ -5,22 +5,37 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   useEffect(() => {
-    const elementos = document.querySelectorAll<HTMLElement>(
-      '.datas__card, .processo__card, .faq__item, .hero__content',
+    const elementos = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        '.datas__card, .processo__card, .faq__item, .hero__content',
+      ),
     )
 
+    elementos.forEach(el => el.classList.add('animar'))
+
+    const visiveis: HTMLElement[] = []
+    const naoVisiveis: HTMLElement[] = []
+
     elementos.forEach(el => {
-      el.style.opacity = '0'
-      el.style.transform = 'translateY(24px)'
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'
+      const rect = el.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) visiveis.push(el)
+      else naoVisiveis.push(el)
+    })
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        visiveis.forEach((el, i) => {
+          el.style.transitionDelay = `${i * 0.06}s`
+          el.classList.add('animar--visivel')
+        })
+      })
     })
 
     const observador = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            ;(entry.target as HTMLElement).style.opacity = '1'
-            ;(entry.target as HTMLElement).style.transform = 'translateY(0)'
+            entry.target.classList.add('animar--visivel')
             observador.unobserve(entry.target)
           }
         })
@@ -28,7 +43,7 @@ export default function Home() {
       { threshold: 0.12 },
     )
 
-    elementos.forEach(el => observador.observe(el))
+    naoVisiveis.forEach(el => observador.observe(el))
 
     return () => observador.disconnect()
   }, [])
