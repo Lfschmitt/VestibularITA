@@ -669,3 +669,15 @@ a { text-decoration: none; color: inherit; }
 
   .footer__conteudo { flex-direction: column; }
 }
+
+/* ---------- ANIMAÇÕES DE ENTRADA ---------- */
+.animar {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animar--visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
