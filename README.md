@@ -6,7 +6,7 @@
 
 ## 📌 Sobre o Projeto
 
-O site oficial do vestibular do ITA, apesar de sua importância para milhares de candidatos por ano, apresenta limitações de usabilidade e design. Este projeto tem como objetivo criar uma versão repaginada, mais intuitiva e acessível, mantendo todas as informações essenciais de forma clara e organizada.
+O site oficial do vestibular do ITA, apesar de sua importância para milhares de candidatos por ano, apresenta limitações de usabilidade e design. Este projeto cria uma versão repaginada, mais intuitiva e acessível, mantendo todas as informações essenciais de forma clara e organizada.
 
 ---
 
@@ -22,12 +22,13 @@ O site oficial do vestibular do ITA, apesar de sua importância para milhares de
 
 ## 🛠️ Tecnologias Utilizadas
 
-> *(Atualize conforme o seu stack)*
-
-- **HTML5 / CSS3 / JavaScript**
-- **Framework:** *(ex: React, Vue, Next.js...)*
-- **Estilização:** *(ex: Tailwind CSS, Sass...)*
-- **Outros:** *(ex: Figma para protótipos, etc.)*
+- **React 19** com **TypeScript**
+- **React Router DOM 7** — roteamento entre páginas
+- **Vite** — bundler e servidor de desenvolvimento
+- **CSS customizado** — variáveis CSS, temas e animações próprias
+- **Fontes:** Syne (títulos) e DM Sans (corpo) via Google Fonts
+- **Vitest + Testing Library** — testes unitários
+- **Vercel** — deploy e hospedagem
 
 ---
 
@@ -35,10 +36,10 @@ O site oficial do vestibular do ITA, apesar de sua importância para milhares de
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/ita-vestibular-redesign.git
+git clone https://github.com/Lfschmitt/VestibularITA.git
 
 # Acesse a pasta do projeto
-cd ita-vestibular-redesign
+cd VestibularITA
 
 # Instale as dependências
 npm install
@@ -47,41 +48,58 @@ npm install
 npm run dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+Abra [http://localhost:5173](http://localhost:5173) no seu navegador.
 
 ---
 
 ## 📁 Estrutura de Pastas
 
 ```
-ita-vestibular-redesign/
-├── public/             # Arquivos estáticos (imagens, fontes, etc.)
+VestibularITA/
+├── public/
+│   └── acervoProvas/       # PDFs das provas e gabaritos por ano
+├── assets/
+│   ├── css/                # Estilos globais (style.css, provas.css)
+│   └── img/                # Imagens e logo
 ├── src/
-│   ├── components/     # Componentes reutilizáveis
-│   ├── pages/          # Páginas do site
-│   ├── styles/         # Estilos globais e variáveis
-│   └── assets/         # Ícones, ilustrações, etc.
-├── README.md
+│   ├── components/         # Navbar e Footer
+│   ├── pages/              # Home e Provas
+│   ├── data/               # Dados das provas (provas.ts)
+│   ├── App.tsx             # Roteamento principal
+│   └── main.tsx            # Ponto de entrada
+├── tests/                  # Testes unitários
+├── index.html
+├── vite.config.ts
 └── package.json
 ```
 
 ---
 
-## 📐 Páginas Planejadas
+## 📄 Páginas Implementadas
 
-- [ ] Página inicial (Home)
-- [ ] Informações sobre o vestibular
-- [ ] Inscrições
-- [ ] Provas e gabaritos
-- [ ] Resultados
-- [ ] Perguntas frequentes (FAQ)
-- [ ] Contato
+- [x] **Home** — Sobre o ITA, processo seletivo 2027, inscrições, avisos e FAQ
+- [x] **Provas** — Acervo de provas e gabaritos de 2008 a 2026 em formato acordeão
+
+---
+
+## 🧪 Testes
+
+```bash
+# Rodar os testes uma vez
+npm test
+
+# Rodar em modo watch
+npm run test:watch
+
+# Gerar relatório de cobertura
+npm run test:coverage
+```
+
+Os testes cobrem o componente Footer e a estrutura de dados das provas (19 edições, 2008–2026). O pipeline de CI roda os testes automaticamente em todo Pull Request para a branch `main`.
 
 ---
 
 ## 🤝 Como Contribuir
-
-Contribuições são bem-vindas! Siga os passos abaixo:
 
 1. Faça um **fork** do repositório
 2. Crie uma branch para sua feature: `git checkout -b feature/minha-feature`
@@ -93,7 +111,7 @@ Contribuições são bem-vindas! Siga os passos abaixo:
 
 ## 📄 Licença
 
-Este projeto está sob a licença [MIT](LICENSE). Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está sob a licença [MIT](LICENSE).
 
 ---
 
@@ -103,4 +121,4 @@ Este é um projeto **não oficial**, desenvolvido de forma independente com fins
 
 ---
 
-<p align="center">Feito com 💙 por <a href="https://github.com/seu-usuario">seu-usuario</a></p>
+<p align="center">Feito com 💙 por <a href="https://github.com/Lfschmitt">Lfschmitt</a></p>
